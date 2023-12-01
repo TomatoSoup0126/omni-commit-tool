@@ -1,0 +1,21 @@
+{
+  "name": "omni-commit-tool",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "omni-gc": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cli",
+    "jira"
+  ],
+  "author": "Jonathan Tang",
+  "license": "ISC",
+  "dependencies": {
+    "prompts": "^2.4.2"
+  }
+}
