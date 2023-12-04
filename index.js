@@ -45,6 +45,7 @@ const defaultJiraPrefix = 'OCPD'
     console.log(`Commit success: ${chalk.green(commitMessage)}`)
   } catch (error) {
     if (error.exitCode === 1) {
+      // commit failed
       console.log(chalk.bgRed.white(' Nothing to commit. '))
     } else {
       console.log(chalk.red('Abort'))
