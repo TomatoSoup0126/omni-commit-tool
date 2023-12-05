@@ -15,12 +15,12 @@
     "jira",
     "git"
   ],
-  "author": "Jonathan Tang",
+  "author": "Jonathan Tang <jonathantang0126@gmail.com> (https://github.com/TomatoSoup0126)",
+  "homepage": "https://github.com/TomatoSoup0126/omni-commit-tool",
   "license": "ISC",
   "dependencies": {
     "chalk": "^5.3.0",
     "execa": "^8.0.1",
     "prompts": "^2.4.2"
-  },
-  "url": "https://github.com/TomatoSoup0126/omni-commit-tool"
+  }
 }

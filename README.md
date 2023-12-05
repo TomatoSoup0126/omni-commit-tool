@@ -5,12 +5,12 @@ Creating a commit made easy.
 
 ## Install
 ```shell
-npm install -g npm i omni-commit-tool
+npm i -g omni-commit-tool
 ```
 
 ## Uninstall
 ```shell
-npm uninstall -g npm i omni-commit-tool
+npm i -g omni-commit-tool
 ```
 
 ## Usage
