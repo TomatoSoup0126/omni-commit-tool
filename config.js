@@ -1,2 +1,5 @@
 #!/usr/bin/env node
-console.log('Hello, world!');
+
+export const launchConfigPrompt = async () => {
+  console.log('🚧 Under construction... 🚧')
+}
