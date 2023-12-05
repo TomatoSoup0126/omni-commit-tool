@@ -1,7 +1,7 @@
 {
   "name": "omni-commit-tool",
   "version": "1.0.0",
-  "description": "",
+  "description": "Creating a commit made easy.",
   "type": "module",
   "main": "index.js",
   "bin": {
@@ -12,7 +12,8 @@
   },
   "keywords": [
     "cli",
-    "jira"
+    "jira",
+    "git"
   ],
   "author": "Jonathan Tang",
   "license": "ISC",
@@ -20,5 +21,6 @@
     "chalk": "^5.3.0",
     "execa": "^8.0.1",
     "prompts": "^2.4.2"
-  }
+  },
+  "url": "https://github.com/TomatoSoup0126/omni-commit-tool"
 }
