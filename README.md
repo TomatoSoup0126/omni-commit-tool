@@ -63,3 +63,6 @@ type: message
 
    <img width="540" src="https://github.com/TomatoSoup0126/omni-commit-tool/assets/49901777/43226661-1550-42a2-b9a4-73f4528e3219">
 
+---
+
+#### Inspired by [cz-cli](https://github.com/commitizen/cz-cli) and [OwlTing/cz](https://github.com/OwlTing/cz)
