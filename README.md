@@ -1,4 +1,4 @@
-# create commit
+# Omni commit tool
 ![](https://img.shields.io/badge/node-18-brightgreen.svg)
 
 Creating a commit made easy.
