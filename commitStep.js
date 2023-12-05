@@ -32,10 +32,12 @@ const input_message = {
 }
 
 const is_jira = {
-  type: 'confirm',
+  type: 'toggle',
   name: 'is_jira',
   message: 'Tag Jira issue ?',
-  initial: true
+  initial: false,
+  active: 'yes',
+  inactive: 'no'
 }
 
 const input_jira = {
