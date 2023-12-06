@@ -4,6 +4,7 @@ import { getConfigFile, path } from '../utils/getConfig.js'
 
 const config = getConfigFile()
 const useEmoji = config.useEmoji || false
+const jiraPrefix = config.jiraPrefix || 'OCPD'
 
 const commitTypesList = commitType.map(type => ({
   title: type.name,
@@ -49,7 +50,7 @@ const input_jira = {
 	name: 'jira_id',
 	message: 'Jira issue id',
 	onRender () {
-    this.msg = chalk.bgBlueBright.white(' Jira issue ID ')
+    this.msg = chalk.bgBlueBright.white(` Jira issue: ${jiraPrefix}- `)
   },
 	validate: value => {
 		if (!value) {
