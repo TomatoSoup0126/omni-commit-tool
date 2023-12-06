@@ -25,7 +25,7 @@ export const launchEmojiSetting = async () => {
       throw new Error('Abort setting')
     }
     fs.writeFileSync(
-      `${path}/omni-gc-config.json`,
+      `${path}/oc-config.json`,
       `${JSON.stringify(
         {
           ...config,
