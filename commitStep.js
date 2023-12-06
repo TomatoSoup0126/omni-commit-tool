@@ -1,5 +1,9 @@
 import chalk from 'chalk'
 import commitType from './commitType.js'
+import { getConfigFile, path } from './getConfig.js'
+
+const config = getConfigFile()
+const useEmoji = config.useEmoji || false
 
 const commitTypesList = commitType.map(type => ({
   title: type.name,
@@ -21,7 +25,7 @@ const input_message = {
   name: 'commit_message',
   message: prev => {
     const target = commitTypesList.find(type => type.value === prev)
-    return `${target.emoji} ${target.title}`
+    return `${useEmoji ? `${target.emoji} ` : ''}${target.title}`
   },
   validate: value => {
     if (!value) {

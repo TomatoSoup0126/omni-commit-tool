@@ -11,7 +11,7 @@ const steps = {
   choices: [
     {
       title: 'Use emoji ?',
-      description: 'Append emoji on commit message ?',
+      description: 'Prepend emoji on commit message ?',
       value: 'emoji',
     },
     {
