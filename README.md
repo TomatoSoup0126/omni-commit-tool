@@ -3,6 +3,17 @@
 
 Creating a commit made easy.
 
+---
+
+- [Install](#install)
+- [Uninstall](#uninstall)
+- [Usage](#usage)
+   - [Commit Steps](#commit-steps)
+   - [Options](#options)
+   - [Setting](#setting)
+
+---
+
 ## Install
 ```shell
 npm i -g omni-commit-tool
@@ -14,11 +25,10 @@ npm i -g omni-commit-tool
 ```
 
 ## Usage
+```zsh
+oc
 ```
-git-oc
-```
-Use `git-oc` to replace `git commit -m` for the commit message
-
+Use `oc` to replace `git commit -m` for the commit message
 Omni commit tool will generate commit in the following format:
 
 ```
@@ -37,31 +47,72 @@ type: message
 ```
 ---
 
-## Steps
+## Commit Steps
 
 1. Choose the desired commit type
 
-   <img width="540" src="https://github.com/TomatoSoup0126/omni-commit-tool/assets/49901777/374b1c88-5d4d-414f-a529-3837d4a3c975">
+   <img width="540" alt="image" src="https://github.com/TomatoSoup0126/omni-commit-tool/assets/49901777/cd7f6869-161e-4512-83c6-4efaed7d8274">
 
 2. Enter your commit message
 
-   <img width="540" src="https://github.com/TomatoSoup0126/omni-commit-tool/assets/49901777/063179bc-48b0-4169-b6d9-3ee33a3354ee">
+   <img width="540" alt="image" src="https://github.com/TomatoSoup0126/omni-commit-tool/assets/49901777/fc576f19-3726-4a7b-a3f7-7fc408c24238">
 
 3. Decide whether to tag a Jira issue
 
-   <img width="540" src="https://github.com/TomatoSoup0126/omni-commit-tool/assets/49901777/0cdde770-f2cd-4601-bc8f-1e60723d4a66">
+   <img width="540" alt="image" src="https://github.com/TomatoSoup0126/omni-commit-tool/assets/49901777/dde1cb31-1282-4e7a-a033-9407bcdbf6f0">
 
    3.1 If choosing yes, input the Jira issue number.
 
-   <img width="540" src="https://github.com/TomatoSoup0126/omni-commit-tool/assets/49901777/b0767c07-28e0-4506-bddb-0d4c578fb997">
+   <img width="540" alt="image" src="https://github.com/TomatoSoup0126/omni-commit-tool/assets/49901777/a16cd43e-c862-4fbd-9b33-3b246fe1142a">
 
 4. Enter the commit category if applicable
 
-   <img width="540" src="https://github.com/TomatoSoup0126/omni-commit-tool/assets/49901777/bfb7aa8a-abd2-42ef-9d19-a4b4ebe513c0">
+   <img width="540" alt="image" src="https://github.com/TomatoSoup0126/omni-commit-tool/assets/49901777/310386b5-5fb9-47cb-a6dc-c59e8954dc2e">
 
 5. Your commit is now complete
 
-   <img width="540" src="https://github.com/TomatoSoup0126/omni-commit-tool/assets/49901777/43226661-1550-42a2-b9a4-73f4528e3219">
+   <img width="540" alt="image" src="https://github.com/TomatoSoup0126/omni-commit-tool/assets/49901777/6e24a33f-f479-470a-b83a-9deee2a1651e">
+   
+
+---
+
+## Options
+```zsh
+      --version  Show version number
+  -s, --setting  Set config
+  -p, --path     Show config path
+      --help     Show help
+```
+
+---
+
+## Setting
+To access the setting panel, use the following command:
+```
+oc --setting
+```
+
+|    Config    | Default  |
+|  ----------  | -------  |
+|  Use emoji   |   false  |
+| Jira prefix  |   OCPD   |
+
+<img width="540" alt="image" src="https://github.com/TomatoSoup0126/omni-commit-tool/assets/49901777/71d38c46-86fa-4416-88a8-6273ce17c6b4">
+
+#### Use emoji
+Control emoji is prepended on the commit message
+
+<img width="540" alt="image" src="https://github.com/TomatoSoup0126/omni-commit-tool/assets/49901777/9118373f-7011-47ed-9038-063b82cd2b52">
+
+#### Set Jira prefix
+Change Jira prefix on tag Jira issues
+
+<img width="540" alt="image" src="https://github.com/TomatoSoup0126/omni-commit-tool/assets/49901777/1f7f3a16-1f84-4801-af9f-9432ed6e3326">
+
+## Config path
+You can find the config path by running `oc --path` and use an editor to edit it
+
+<img width="595" src="https://github.com/TomatoSoup0126/omni-commit-tool/assets/49901777/ec07e7c2-9bac-4ed8-b08b-9576aa9a3459">
 
 ---
 
