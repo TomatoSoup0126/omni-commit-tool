@@ -4,7 +4,7 @@ import { execa } from 'execa'
 import chalk from 'chalk'
 import { steps } from './commitStep.js'
 import commitType from './commitType.js'
-import { getConfigFile } from './getConfig.js'
+import { getConfigFile } from '../utils/getConfig.js'
 
 const config = getConfigFile()
 

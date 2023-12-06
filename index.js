@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import { launchCommitPrompt } from './commitPrompts.js'
-import { launchConfigPrompt } from './config.js'
+import { launchCommitPrompt } from './src/commit/commitPrompts.js'
+import { launchConfigPrompt } from './src/config/config.js'
 import yargs from 'yargs'
 import { hideBin } from 'yargs/helpers'
 

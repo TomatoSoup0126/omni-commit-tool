@@ -1,6 +1,6 @@
 import chalk from 'chalk'
 import commitType from './commitType.js'
-import { getConfigFile, path } from './getConfig.js'
+import { getConfigFile, path } from '../utils/getConfig.js'
 
 const config = getConfigFile()
 const useEmoji = config.useEmoji || false
