@@ -4,8 +4,12 @@ import { execa } from 'execa'
 import chalk from 'chalk'
 import { steps } from './commitStep.js'
 import commitType from './commitType.js'
+import { getConfigFile } from './getConfig.js'
 
-const defaultJiraPrefix = 'OCPD'
+const config = getConfigFile()
+
+const useEmoji = config.useEmoji || false
+const defaultJiraPrefix = config.jiraPrefix || 'OCPD'
 
 export const launchCommitPrompt = async () => {
 	let isCanceled = false
@@ -36,7 +40,8 @@ export const launchCommitPrompt = async () => {
     } = response
 
     const jiraString = is_jira ? `[${defaultJiraPrefix}-${jira_id}]` : ''
-    const commitString = `${commitType.find(item => item.name === commit_type_value)?.emoji || ''} ${commit_type_value}`
+    const emojiString = useEmoji ? `${commitType.find(item => item.name === commit_type_value)?.emoji || ''} ` : ''
+    const commitString = `${emojiString}${commit_type_value}`
     const categoryString = !!issue_category ? `(${issue_category})` : ''
     const commitMessage = `${jiraString} ${commitString}${categoryString}: ${commit_message}`
 
