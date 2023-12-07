@@ -3,7 +3,7 @@
 
 Creating a commit made easy.
 
----
+## Section Links
 
 - [Install](#install)
 - [Uninstall](#uninstall)
@@ -12,7 +12,7 @@ Creating a commit made easy.
    - [Options](#options)
    - [Setting](#setting)
 
----
+
 
 ## Install
 ```shell
@@ -29,6 +29,7 @@ npm i -g omni-commit-tool
 oc
 ```
 Use `oc` to replace `git commit -m` for the commit message
+
 Omni commit tool will generate commit in the following format:
 
 ```
@@ -45,7 +46,7 @@ type: message
 // example
 💡 feat: commit test
 ```
----
+
 
 ## Commit Steps
 
@@ -74,7 +75,7 @@ type: message
    <img width="540" alt="image" src="https://github.com/TomatoSoup0126/omni-commit-tool/assets/49901777/6e24a33f-f479-470a-b83a-9deee2a1651e">
    
 
----
+
 
 ## Options
 ```zsh
@@ -84,7 +85,7 @@ type: message
       --help     Show help
 ```
 
----
+
 
 ## Setting
 To access the setting panel, use the following command:
@@ -114,6 +115,5 @@ You can find the config path by running `oc --path` and use an editor to edit it
 
 <img width="595" src="https://github.com/TomatoSoup0126/omni-commit-tool/assets/49901777/ec07e7c2-9bac-4ed8-b08b-9576aa9a3459">
 
----
 
 #### Inspired by [cz-cli](https://github.com/commitizen/cz-cli) and [OwlTing/cz](https://github.com/OwlTing/cz)
