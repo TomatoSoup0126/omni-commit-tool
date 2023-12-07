@@ -3,6 +3,8 @@
 
 Creating a commit made easy.
 
+<img width="540" alt="image" src="https://github.com/TomatoSoup0126/omni-commit-tool/assets/49901777/091cffa9-73a4-49a2-b2d2-9092b1862c10">
+
 ## Section Links
 
 - [Install](#install)
@@ -97,6 +99,8 @@ oc --setting
 |  ----------  | -------  |
 |  Use emoji   |   false  |
 | Jira prefix  |   OCPD   |
+
+<br>
 
 <img width="540" alt="image" src="https://github.com/TomatoSoup0126/omni-commit-tool/assets/49901777/71d38c46-86fa-4416-88a8-6273ce17c6b4">
 
