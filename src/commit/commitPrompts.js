@@ -11,7 +11,21 @@ const config = getConfigFile()
 const useEmoji = config.useEmoji || false
 const defaultJiraPrefix = config.jiraPrefix || 'OCPD'
 
-export const launchCommitPrompt = async () => {
+export const launchCommitPrompt = async ({ blank = false } = {}) => {
+
+  if (!blank) {
+    try {
+      const { stdout } = await execa('git', ['diff', '--cached', '--name-only'])
+      
+      if (stdout.trim() === '') {
+        console.log(chalk.red('No staged files.'))
+        return 
+      }
+    } catch (error) {
+      console.log(error)
+    } 
+  }
+
 	let isCanceled = false
 
 	const response = await prompts(steps, {
@@ -45,7 +59,11 @@ export const launchCommitPrompt = async () => {
     const categoryString = !!issue_category ? `(${issue_category})` : ''
     const commitMessage = `${jiraString} ${commitString}${categoryString}: ${commit_message}`
 
-    await execa('git', ['commit', '-m', commitMessage])
+    if (blank) {
+      await execa('git', ['commit', '--allow-empty', '-m', commitMessage])
+    } else {
+      await execa('git', ['commit', '-m', commitMessage])
+    }
 
     console.log(`Commit success: ${chalk.green(commitMessage)}`)
   } catch (error) {
