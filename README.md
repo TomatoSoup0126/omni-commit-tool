@@ -84,7 +84,8 @@ type: message
       --version  Show version number
   -b, --blank    Create blank commit
   -s, --setting  Set config
-  -p, --path     Show config path
+  -c, --config   Show config path
+  -t, --types    Show commit type list path
       --help     Show help
 ```
 
@@ -100,10 +101,12 @@ oc --setting
 |  ----------  | -------  |
 |  Use emoji   |   false  |
 | Jira prefix  |   OCPD   |
+| Jira format  |   [{{prefix}}-{{issueId}}]   |
 
 <br>
 
-<img width="540" alt="image" src="https://github.com/TomatoSoup0126/omni-commit-tool/assets/49901777/71d38c46-86fa-4416-88a8-6273ce17c6b4">
+<img width="540" alt="image" src="https://github.com/TomatoSoup0126/omni-commit-tool/assets/49901777/0180d010-8989-4af7-8763-3e4422c1847d">
+
 
 #### Use emoji
 Control emoji is prepended on the commit message
@@ -115,10 +118,24 @@ Change Jira prefix on tag Jira issues
 
 <img width="540" alt="image" src="https://github.com/TomatoSoup0126/omni-commit-tool/assets/49901777/1f7f3a16-1f84-4801-af9f-9432ed6e3326">
 
-## Config path
-You can find the config path by running `oc --path` and use an editor to edit it
+#### Set Jira format
+Change Jira format on tag Jira issues, `{{prefix}}` and `{{issueId}}` is required
 
-<img width="595" src="https://github.com/TomatoSoup0126/omni-commit-tool/assets/49901777/ec07e7c2-9bac-4ed8-b08b-9576aa9a3459">
+<img width="540" alt="image" src="https://github.com/TomatoSoup0126/omni-commit-tool/assets/49901777/3de4c6b3-8348-4e83-93a7-696172c73a21">
+
+
+## Config path
+You can find the config path by running `oc --config` and use an editor to edit it
+
+<img width="618" alt="image" src="https://github.com/TomatoSoup0126/omni-commit-tool/assets/49901777/c792859e-0271-4aec-a735-57926120ed1b">
+
+## Commit types path
+You can find the config path by running `oc --types` and use an editor to edit it
+
+[Default list](https://github.com/TomatoSoup0126/omni-commit-tool/blob/main/src/commit/commitType.js)
+
+<img width="618" alt="image" src="https://github.com/TomatoSoup0126/omni-commit-tool/assets/49901777/a9350c3f-c43e-4dfe-8ea8-e951f0d8250c">
+
 
 
 #### Inspired by [cz-cli](https://github.com/commitizen/cz-cli) and [OwlTing/cz](https://github.com/OwlTing/cz)
