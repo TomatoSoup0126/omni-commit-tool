@@ -82,6 +82,7 @@ type: message
 ## Options
 ```zsh
       --version  Show version number
+  -b, --blank    Create blank commit
   -s, --setting  Set config
   -p, --path     Show config path
       --help     Show help
