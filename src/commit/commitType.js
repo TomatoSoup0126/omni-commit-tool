@@ -2,67 +2,56 @@ export default [
 	{
 		name: 'feat',
 		emoji: '💡',
-		description: 'A new feature',
-		value: 'feat'
+		description: 'A new feature'
 	},
 	{
 		name: 'style',
 		emoji: '🎨',
-		description: 'Markup, white-space, formatting, missing semi-colons...',
-		value: 'style'
+		description: 'Markup, white-space, formatting, missing semi-colons...'
 	},
 	{
 		name: 'fix',
 		emoji: '🐛',
-		description: 'A bug fix',
-		value: 'fix'
+		description: 'A bug fix'
 	},
 	{
 		name: 'hotfix',
 		emoji: '🚨',
-		description: 'Emergency fix',
-		value: 'hotfix'
+		description: 'Emergency fix'
 	},
 	{
-			name: 'chore',
-			emoji: '🧹',
-			description: 'Build process or auxiliary tool changes',
-			value: 'chore'
+		name: 'chore',
+		emoji: '🧹',
+		description: 'Build process or auxiliary tool changes'
 	},
 	{
 		name: 'refactor',
 		emoji: '🔨',
-		description: 'A code change that neither fixes a bug or adds a feature',
-		value: 'refactor'
+		description: 'A code change that neither fixes a bug or adds a feature'
 	},
 	{
 		name: 'perf',
 		emoji: '⚡',
-		description: 'A code change that improves performance',
-		value: 'perf'
+		description: 'A code change that improves performance'
 	},
 	{
 		name: 'test',
 		emoji: '🎮',
-		description: 'Adding missing tests',
-		value: 'test'
+		description: 'Adding missing tests'
 	},
 	{
 		name: 'ci',
 		emoji: '👷',
-		description: 'CI related changes',
-		value: 'ci'
+		description: 'CI related changes'
 	},
 	{
 		name: 'docs',
 		emoji: '📝',
-		description: 'Documentation only changes',
-		value: 'docs'
+		description: 'Documentation only changes'
 	},
 	{
 		name: 'release',
 		emoji: '🎉',
-		description: 'Create a release commit',
-		value: 'release'
+		description: 'Create a release commit'
 	}
 ]

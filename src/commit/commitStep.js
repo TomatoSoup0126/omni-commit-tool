@@ -9,7 +9,7 @@ const jiraPrefix = config.jiraPrefix || 'OCPD'
 const commitTypesList = commitType.map(type => ({
   title: type.name,
   description: `${type.emoji} ${type.description}`,
-  value: type.value,
+  value: type.name,
   emoji: type.emoji
 }))
 

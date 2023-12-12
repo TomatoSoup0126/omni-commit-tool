@@ -9,7 +9,8 @@ import { getConfigFile } from '../utils/getConfig.js'
 const config = getConfigFile()
 
 const useEmoji = config.useEmoji || false
-const defaultJiraPrefix = config.jiraPrefix || 'OCPD'
+const jiraPrefix = config.jiraPrefix || 'OCPD'
+const jiraFormat = config.jiraFormat || '[{{prefix}}-{{issueId}}]'
 
 export const launchCommitPrompt = async ({ blank = false } = {}) => {
 
@@ -53,7 +54,11 @@ export const launchCommitPrompt = async ({ blank = false } = {}) => {
       issue_category
     } = response
 
-    const jiraString = is_jira ? `[${defaultJiraPrefix}-${jira_id}]` : ''
+    const jiraString = is_jira ?
+      jiraFormat
+        .replace('{{prefix}}', jiraPrefix)
+        .replace('{{issueId}}', jira_id)
+      : ''
     const emojiString = useEmoji ? `${commitType.find(item => item.name === commit_type_value)?.emoji || ''} ` : ''
     const commitString = `${emojiString}${commit_type_value}`
     const categoryString = !!issue_category ? `(${issue_category})` : ''

@@ -3,6 +3,7 @@
 import prompts from 'prompts'
 import { launchEmojiSetting } from './configEmoji.js'
 import { launchPrefixSetting } from './configPrefix.js'
+import { launchFormatSetting } from './configFromat.js'
 
 const steps = {
   type: 'select',
@@ -19,6 +20,11 @@ const steps = {
       description: 'Change Jira prefix ?',
       value: 'prefix',
     },
+    {
+      title: 'Set Jira format?',
+      description: 'Change Jira format ?',
+      value: 'format',
+    }
   ]
 }
 
@@ -39,5 +45,8 @@ export const launchConfigPrompt = async () => {
   }
   if (response.setting_type === 'prefix') {
     launchPrefixSetting()
+  }
+  if (response.setting_type === 'format') {
+    launchFormatSetting()
   }
 }
