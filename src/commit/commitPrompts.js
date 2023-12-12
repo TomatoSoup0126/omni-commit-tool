@@ -23,7 +23,8 @@ export const launchCommitPrompt = async ({ blank = false } = {}) => {
         return 
       }
     } catch (error) {
-      console.log(error)
+      console.log(chalk.red('Error from git'))
+      return 
     } 
   }
 
