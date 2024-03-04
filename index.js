@@ -13,6 +13,10 @@ const argv = yargs(hideBin(process.argv))
     alias: 'b',
     describe: 'Create blank commit'
   },
+  'revert': {
+    alias: 'r',
+    describe: 'Create revert commit'
+  },
   'setting': {
     alias: 's',
     describe: 'Set config'
@@ -31,6 +35,8 @@ const argv = yargs(hideBin(process.argv))
 
 if (argv.setting) {
   launchConfigPrompt()
+} else if (argv.revert) {
+  launchCommitPrompt({ revert: true })
 } else if (argv.config) {
   showConfigPath()
 } else if (argv.blank) {
