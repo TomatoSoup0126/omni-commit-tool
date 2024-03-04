@@ -83,6 +83,7 @@ type: message
 ```zsh
       --version  Show version number
   -b, --blank    Create blank commit
+  -r, --revert   Create revert commit
   -s, --setting  Set config
   -c, --config   Show config path
   -t, --types    Show commit type list path
